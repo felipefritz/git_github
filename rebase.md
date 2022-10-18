@@ -14,20 +14,30 @@ Sirve para:
 - Separar commits
   
 ### Como usar rebase:
-1. Se debe estar en la rama a la cual se le quieren pasar los cambios ( ```git checkout nombreRama```)
+1. Se debe estar en la rama a la cual se le quieren agregar los cambios de otra rama ( ```git checkout nombreRama```)
 2. ```git rebase feature/add_file``` ( o nombre rama a unir al master)
-3. Validar cambios con g```it checkout ramaIntegrada``` -> ```git merge master```
+3. Validar cambios con ```git checkout ramaIntegrada``` -> ```git merge master```
 4. Moverse a la rama master y eliminar rama integrada con ```git branch -d nombreRama```
 
 No se debe utilizar cuando ya se hizo push.
 
 ### REBASE INTERACTIVO:
+- Es un rebase en donde se abre un archivo en el terminal el cual se puede editar.
 - 
  1. ```git rebase -i HEAD~2``` (o cantidad de commits anteriores)
     1. -i: interactivo
     2. HEAD~2: numero de commits (2)
     3. Tambien se le puede pasar el id del commit
- 2. 
+
+
+ 2. Dentro del archivo interactivo:
+    1. Presionar letra a para editar el archivo
+    2. pick: son los ultimos commit y se pueden editar los mensajes del commit
+    3. squash (s): Toma 2 commits y los fusiona.
+       1. Para usar squash se debe cambiar pick del ultimo commit por squash o s.
+       2. Esto lo que hara es fusionar los ultimos 2 commit
+
+
 - el ultimo de la lista es el ultimo commit
 - squash: fusionar dos commits en uno solo
 - al ejecutar el comando en i:  (SQUASH)

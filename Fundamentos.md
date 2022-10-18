@@ -57,3 +57,21 @@
 ### Editar comentarios de un commit: 
 -```git commit –amend -m “nuevo mensaje”``` editar comentario del útlimo commit
 
+### Agregar archivos por separado:
+-```git add nombrearchivo.html archivo2.html ```
+
+#### Comodines agregar archivos
+1. por extension: ```git add *.html ```: agrega todos los archivos .html del directorio actual
+2. por carpeta:  ```git add carpeta/*.js ```
+3. -  ```git add nombrecarpeta/ ``` : agregara todos los archivos y subdirectorios
+
+
+### Agregar carpeta vacia:
+- git no le da seguimiento a carpetas vacias, por ende no se agregara al commit.
+
+dentro de la carpeta vacia agregar el archivo .gitkeep
+agregar gitkeep al commit: ``` git add carpeta/.gitkeep ```
+### Alias a los shortcuts
+```git config –global alias.nombreAlias shorcutAcambiar```
+
+ejemplo: ```git config –global alias.s status –short```

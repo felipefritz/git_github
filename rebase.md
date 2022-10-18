@@ -32,21 +32,10 @@ No se debe utilizar cuando ya se hizo push.
 
  2. Dentro del archivo interactivo:
     1. Presionar letra a para editar el archivo
-    2. pick: son los ultimos commit y se pueden editar los mensajes del commit
-    3. squash (s): Toma 2 commits y los fusiona.
+    2. ```:pick```:: son los ultimos commit y se pueden editar los mensajes del commit
+    3. ```:squash (s)```:: Toma 2 commits y los fusiona.
        1. Para usar squash se debe cambiar pick del ultimo commit por squash o s.
        2. Esto lo que hara es fusionar los ultimos 2 commit
 
-
-- el ultimo de la lista es el ultimo commit
-- squash: fusionar dos commits en uno solo
-- al ejecutar el comando en i:  (SQUASH)
--  ```pick 338df10 ```  al momento: cambiar pick por squash o s (en el commit que se quiera unir al commit anterior a ese de la lista )
-
-
-renombrar mensaje de un commit con rebase
-ejecutar i, luego en el pick cambiarlo a r y salir. esto nos permitira cambiar el mensaje
-
-
 Si hay conflictos entre cambios de github y local, se debe configurar el pull:
-git config pull.rebase true
+```:git config pull.rebase true```:

@@ -91,10 +91,49 @@
    2.  git branch -a : para revisar todas las ramas en el repo
    3. git checkout : para pasarse a la rama de otra persona
    4. git checkout master: Para hacer el merge con otra rama o bien hacer un git push origin rama-x: Para subir toda la rama a github y hacer un pull request desde github
+
+
 2. Subir ramas:
    1. No se pueden subir estando en la rama con un git push
    2. Subir ramas de esta manera: git push --set-upstream origin  nombreRama
 
 
+3. Traer las ramas a local ( Pueden ser ramas de otra persona para revisarla):
+   1. ```git pull –all```: esto no las mostrara en local 
+   2. para mostrar las ramas en local: ```git branch -a```
+   3. Cambiarse a otra rama:
+   4. una vez identificada la rama: ```git checkout nombreRama```
 
+4. Limpiar Ramas:
+   1. ```git pull origin master```: para traer los merge y utlmos cambios en github
+   2. ```git branch -d nombreRama```: elimina ramas locales no remotes
+   3. eliminar una rama en local y en remote solo si existe en ambos lados:
+        1. ```git push origin :rnombreRama```
+   
+   4. Eliminar rama si existe en local con git branch -a  pero no en remote:
+      1. ```git remote prune origin```
+
+## Rama produccion:
+- Cuando se le da soporte a una version anterior:
+
+
+1. crear una rama nueva y crear un tag en esa rama
+2. hacer el ```git push –tag```
+3. hacer un release a ese tag. Con esto hay un backup de la rama en caso de que sea eliminada
+4. Restaurar rama a partir de un tag:
+   1. hacer un git checkout a la rama desde local y hacer un git push para subir la rama
+   2. Si la rama no existe en remote ni local ni en branch -a, nos podemos cambiar a la rama del tag:
+      1. ```git checkout v1.0.0``` o la version deseada en github crear rama a partir de version
+5. Eliminar rama en remote: ```git push origin :rama```
+
+
+
+## Issues: 
+- Se utilizan para hacer preguntas o hacer sugerencias a un repo
+- Resolver issue por commit: git commit -am “Fixes #numeroissue: mensaje”
+- Issue templates: en settings ->issues templates -> setup template
+- wikis: Es una seccion que simula un sitio web del repositorio
+## Proyectos:
+-  Son como una pizarra en blanco donde se pueden gestionar tareas}
+- Pueden ser pizarras tipo kanban o tablas
 

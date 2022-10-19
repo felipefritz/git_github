@@ -8,6 +8,7 @@
 
 - Crear ramas: <code>git branch nombreRama </code>
 - Listar ramas: ```git branch```  (con * es la rama actual)
+- Listar ramas remote y local: ```git branch -a```
 - Mover a otra rama: ```git checkout nombreRama```
 
 ### Unir Ramas ( fast forward)

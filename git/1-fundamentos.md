@@ -71,7 +71,4 @@
 
 dentro de la carpeta vacia agregar el archivo .gitkeep
 agregar gitkeep al commit: ``` git add carpeta/.gitkeep ```
-### Alias a los shortcuts
-```git config –global alias.nombreAlias shorcutAcambiar```
 
-ejemplo: ```git config –global alias.s status –short```
